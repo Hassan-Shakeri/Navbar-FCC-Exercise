@@ -1,0 +1,126 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+
+  width: 100vw;
+  height: 100vh;
+  color: rgb(226, 210, 188);
+  background-color: #222;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.nav-center {
+  background-color: #808486;
+  flex: 1 0 445px;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  height: 0;
+  list-style: none;
+  transition: all 0.3s linear;
+}
+
+.toggle-btn {
+  display: none;
+}
+
+.show-links {
+  height: 200px;
+}
+
+.social-icons {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links li,
+.social-icons li {
+  margin: 15px;
+}
+
+.links a,
+.social-icons a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: rgb(226, 210, 188);
+}
+
+h1 {
+  margin: 15px;
+}
+
+.toggle-btn:hover {
+  transform: rotate(90deg);
+  transition: all 0.3s linear;
+  color: white;
+}
+
+.social-icons a :hover {
+  color: white;
+  transition: 0.3s linear;
+  transform: scale(1.4);
+}
+
+.links a:hover {
+  color: white;
+  transition: all 0.2s linear;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 800px) {
+    
+  .social-icons {
+    display: none;
+  }
+  .nav-center {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .links {
+    background-color: #808486;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    transition: all 0.3s linear;
+    overflow: hidden;
+  }
+  .links a:hover {
+    color: white;
+    transition: all 0.2s linear;
+  }
+
+  .toggle-btn {
+    margin: 15px;
+    padding: 5px;
+    border-radius: 20%;
+    cursor: pointer;
+    border-style: none;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s linear;
+    background-color: rgb(226, 210, 188);
+  }
+}
